@@ -6,15 +6,15 @@ decision = 'y'
 # Make a loop
 while decision == 'y' or decision == 'Y':
     # Homework title
-    print('Where do you belong in school?')
+    print(f'Where do you belong in school?')
 
     # Input for age
-    age = int(input('Please enter your age: '))
+    age = int(input(f'Please enter your age: '))
 
-    # Looping for negatives and invalid numbers
-    if age < 0:
-        print(f'Please enter a positive number.')
-        continue # Loops program if you enter a negative number
+    # Looping for invalid numbers
+    if age < 0 or age > 100:
+        print(f'Please enter a valid number.')
+        continue # Loops program if you enter a negative number or >100
     
     # If/else statements for age
     if age >= 0 and age <= 5:
@@ -32,7 +32,7 @@ while decision == 'y' or decision == 'Y':
     elif age >= 19:
         print(f"You're an adult. Choose your career path.")
 
-
+        
     # Try again
     decision = input('Enter another age? (y/n): ')
 
